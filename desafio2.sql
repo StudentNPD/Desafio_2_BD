@@ -1,6 +1,9 @@
 -- CREAR BASE DE DATOS
 CREATE DATABASE desafio2_Natalia_Pena_569;
 
+-- Entrando a la base de datos
+\c desafio2_Natalia_Pena_569;
+
 -- CREAR TABLA
 CREATE TABLE IF NOT EXISTS INSCRITOS(cantidad INT, fecha DATE, fuente
 VARCHAR);
