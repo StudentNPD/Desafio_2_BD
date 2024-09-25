@@ -50,9 +50,9 @@ SELECT SUM(cantidad) FROM inscritos;
 -- 774 
 
 -- Pregunta 3 - Cuál o cuales son los registros de mayor antiguedad?
-SELECT fecha, cantidad, fuente from inscritos WHERE fecha in (SELECT max(fecha) FROM inscritos);
--- 2021-01-08  83 Blog
--- 2021-01-08  99 Página
+SELECT fecha, cantidad, fuente from inscritos WHERE fecha in (SELECT MIN(fecha) FROM inscritos);
+-- 2021-01-01  44 Blog
+-- 2021-01-01  56 Página
 
 -- Pregunta 4 - ¿Cuántos inscritos hay por día? (entendiendo un día como una fecha distinta de ahora en adelante)
 SELECT SUM(cantidad), fecha FROM inscritos GROUP BY fecha ORDER BY fecha ASC;
